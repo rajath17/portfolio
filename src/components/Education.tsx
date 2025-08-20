@@ -7,18 +7,18 @@ const Education: React.FC = () => {
   const educationData = [
     {
       id: 1,
-      degree: "Bachelor of Engineering in Artificial Intelligence & Machine Learning",
+      degree: "Bachelor of Engineering in CSE(Artificial Intelligence & Machine Learning)",
       institution: "Engineering College",
-      location: "Karnataka, India",
+      location: "Chikkaballapur,Karnataka, India",
       period: "2022 - 2026",
       status: "Currently Pursuing",
       grade: "Expected: First Class",
       description: "Comprehensive program covering AI fundamentals, machine learning algorithms, deep learning, computer vision, and data science applications.",
       highlights: [
-        "Advanced coursework in Neural Networks and Deep Learning",
-        "Hands-on projects in Computer Vision and NLP",
+        "Cloud-driven intelligence for the future.",
+        "Hands-on projects ",
         "Research focus on practical AI applications",
-        "Strong foundation in mathematics and statistics"
+       
       ],
       icon: <GraduationCap className="w-6 h-6" />,
       color: "from-blue-500 to-purple-600"
@@ -26,17 +26,17 @@ const Education: React.FC = () => {
     {
       id: 2,
       degree: "Pre-University College (PUC)",
-      institution: "Science College",
-      location: "Karnataka, India",
+      institution: "Siddeshwara PU College",
+      location: "DavanagereKarnataka, India",
       period: "2020 - 2022",
       status: "Completed",
-      grade: "85%",
-      description: "Science stream with focus on Physics, Chemistry, Mathematics, and Computer Science, building strong analytical foundation.",
+      grade: "74%",
+      description: "Science stream with focus on Physics, Chemistry, Mathematics, and Biology, building strong analytical foundation.",
       highlights: [
-        "Excellence in Mathematics and Computer Science",
+       
         "Strong analytical and problem-solving skills",
         "Active participation in science competitions",
-        "Foundation for engineering studies"
+        
       ],
       icon: <Award className="w-6 h-6" />,
       color: "from-green-500 to-blue-500"
@@ -44,11 +44,11 @@ const Education: React.FC = () => {
     {
       id: 3,
       degree: "Secondary School Leaving Certificate (SSLC)",
-      institution: "High School",
-      location: "Karnataka, India",
+      institution: "Kendriya Vidyalaya CRPF",
+      location: "Yelahanka,Banglore,Karnataka, India",
       period: "2019 - 2020",
       status: "Completed",
-      grade: "90%",
+      grade: "60%",
       description: "Strong academic performance across all subjects with particular excellence in mathematics and science.",
       highlights: [
         "Outstanding academic performance",
@@ -185,10 +185,8 @@ const Education: React.FC = () => {
                 'Computer Vision',
                 'Deep Learning',
                 'Data Structures',
-                'Algorithms',
-                'Mathematics',
-                'Statistics'
-              ].map((area, index) => (
+                'Cloud Computing',
+                             ].map((area, index) => (
                 <span
                   key={index}
                   className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white px-6 py-3 rounded-full border border-blue-500/30 hover:border-blue-400 transition-all duration-300"

@@ -36,25 +36,28 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      label: "Email",
-      value: "rajath.mohare@email.com",
-      href: "mailto:rajath.mohare@email.com",
-      color: "from-blue-500 to-cyan-500"
+      
+        icon: <Mail className="w-6 h-6" />,
+        label: "Email",
+        value: "moharerajath@email.com",
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=moharerajath@email.com",
+        color: "from-blue-500 to-cyan-500",
+      
+      
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210",
-      color: "from-green-500 to-emerald-500"
+      value: "+91 8792019764",
+      href: "tel:+918792019764",   // best practice: remove space after country code
+      color: "from-green-500 to-emerald-500",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "Karnataka, India",
-      href: "#",
-      color: "from-purple-500 to-pink-500"
+      value: "GC CRPF Yelahanka, Bangalore, Karnataka, India",
+      href: "https://www.google.com/maps/search/?api=1&query=GC+CRPF+Yelahanka,+Bangalore,+Karnataka,+India",
+      color: "from-purple-500 to-pink-500",
     }
   ];
 
@@ -62,22 +65,22 @@ const Contact: React.FC = () => {
     {
       icon: <Github className="w-8 h-8" />,
       label: "GitHub",
-      href: "https://github.com/rajathmohare",
+      href: "https://github.com/rajath17",
       color: "hover:text-gray-300",
       description: "Check out my code repositories"
     },
     {
       icon: <Linkedin className="w-8 h-8" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/rajathmohare",
+      href: "https://www.linkedin.com/in/rajath-mohare-a1487b275",
       color: "hover:text-blue-400",
-      description: "Connect with me professionally"
+      description: "Connect with me professionally",
     },
     {
       icon: <Mail className="w-8 h-8" />,
       label: "Email",
-      href: "mailto:rajath.mohare@email.com",
-      color: "hover:text-green-400",
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=moharerajath@email.com",
+      color: "from-blue-500 to-cyan-500",
       description: "Send me a direct message"
     }
   ];

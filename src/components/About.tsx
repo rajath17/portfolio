@@ -11,8 +11,8 @@ const About: React.FC = () => {
 
   useEffect(() => {
     const targets = {
-      projects: 15,
-      technologies: 12,
+      projects: 2,
+      technologies: 5,
       experience: 2,
       achievements: 5
     };
@@ -65,19 +65,18 @@ const About: React.FC = () => {
     {
       icon: <Users className="w-8 h-8" />,
       title: "Collaborative Spirit",
-      description: "Strong team player with excellent communication skills and adaptability in dynamic environments."
+      description: "Strong team player with good communication skills and adaptability in dynamic environments."
     }
   ];
 
   const stats = [
-    { label: "Projects Completed", value: counters.projects, suffix: "+" },
-    { label: "Technologies Mastered", value: counters.technologies, suffix: "+" },
-    { label: "Years Learning", value: counters.experience, suffix: "+" },
+    { label: "Projects Completed", value: counters.projects },
+    { label: "Technologies Mastered", value: counters.technologies},
     { label: "Key Achievements", value: counters.achievements, suffix: "" }
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-900">
+    <section id="about" className="py-20 bg-gray-9000">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

@@ -40,6 +40,16 @@ const Hero: React.FC = () => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const downloadResume = () => {
+    // Create a link element to trigger download
+    const link = document.createElement('a');
+    link.href = '/1SJ22CI044.docx'; // Updated to your actual resume file
+    link.download = 'Rajath_K_Mohare_Resume.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden flex items-center">
       {/* Animated Background */}
@@ -53,9 +63,9 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-              Rajath K
+              It's me
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Mohare
+                
               </span>
             </h1>
             
@@ -78,7 +88,10 @@ const Hero: React.FC = () => {
               >
                 View Projects
               </button>
-              <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-full hover:bg-blue-400 hover:text-white transition-all duration-300">
+              <button 
+                onClick={downloadResume}
+                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-full hover:bg-blue-400 hover:text-white transition-all duration-300"
+              >
                 Download Resume
               </button>
             </div>
@@ -99,10 +112,12 @@ const Hero: React.FC = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="w-80 h-80 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse"></div>
-              <div className="absolute inset-4 bg-gray-800 rounded-full flex items-center justify-center">
-                <div className="w-64 h-64 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-white text-6xl font-bold">
-                  RM
-                </div>
+              <div className="absolute inset-4 bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
+                <img
+                  src="/profile.jpg"
+                  alt="Profile"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
           </div>
