@@ -21,17 +21,48 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : 'http://localhost:5000');
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle');
+        }, 5000);
+      } else {
+        setSubmitStatus('error');
+        console.error('Form submission error:', result.message);
+        
+        // Reset error message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle');
+        }, 5000);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Network error:', error);
       
+      // Reset error message after 5 seconds
       setTimeout(() => {
         setSubmitStatus('idle');
       }, 5000);
-    }, 2000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -39,8 +70,8 @@ const Contact: React.FC = () => {
       
         icon: <Mail className="w-6 h-6" />,
         label: "Email",
-        value: "moharerajath@email.com",
-        href: "https://mail.google.com/mail/?view=cm&fs=1&to=moharerajath@email.com",
+        value: "moharerajath@gmail.com",
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=moharerajath@gmail.com",
         color: "from-blue-500 to-cyan-500",
       
       
@@ -79,7 +110,7 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="w-8 h-8" />,
       label: "Email",
-        href: "https://mail.google.com/mail/?view=cm&fs=1&to=moharerajath@email.com",
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=moharerajath@gmail.com",
       color: "from-blue-500 to-cyan-500",
       description: "Send me a direct message"
     }
@@ -270,8 +301,8 @@ const Contact: React.FC = () => {
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm">
                 Prefer direct contact? Email me at{' '}
-                <a href="mailto:rajath.mohare@email.com" className="text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                  rajath.mohare@email.com
+                <a href="mailto:moharerajath@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                  moharerajath@gmail.com
                 </a>
               </p>
             </div>

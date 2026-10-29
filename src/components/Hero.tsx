@@ -41,10 +41,9 @@ const Hero: React.FC = () => {
   };
 
   const downloadResume = () => {
-    // Create a link element to trigger download
     const link = document.createElement('a');
-    link.href = '/1SJ22CI044.docx'; // Updated to your actual resume file
-    link.download = 'Rajath_K_Mohare_Resume.docx';
+    link.href = '/Rajath-Mohare-Resume.pdf';
+    link.download = 'Rajath-Mohare-Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -76,9 +75,7 @@ const Hero: React.FC = () => {
             </div>
 
             <p className="text-lg text-gray-400 mb-10 max-w-2xl leading-relaxed">
-              Passionate about transforming complex data into intelligent solutions. 
-              Specializing in computer vision, machine learning, and innovative AI applications 
-              that solve real-world problems.
+            Driven by a passion for turning complex data into actionable intelligence. I specialize in computer vision, machine learning, and cutting-edge AI solutions that address real-world challenges with innovation and precision.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
@@ -88,22 +85,22 @@ const Hero: React.FC = () => {
               >
                 View Projects
               </button>
-              <button 
+              <button
                 onClick={downloadResume}
-                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-full hover:bg-blue-400 hover:text-white transition-all duration-300"
+                className="px-8 py-4 rounded-full border border-blue-400 text-blue-300 hover:text-white hover:bg-blue-500/20 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Download Resume
               </button>
             </div>
 
             <div className="flex justify-center lg:justify-start space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform">
+              <a href="https://github.com/rajath17" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform">
                 <Github size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform">
+              <a href="https://www.linkedin.com/in/rajath-mohare-a1487b275" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform">
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=moharerajath@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform">
                 <Mail size={24} />
               </a>
             </div>
@@ -114,8 +111,8 @@ const Hero: React.FC = () => {
               <div className="w-80 h-80 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse"></div>
               <div className="absolute inset-4 bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/profile.jpg"
-                  alt="Profile"
+                  src="/profile.jpeg"
+                  alt="Rajath Mohare"
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>

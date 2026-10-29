@@ -9,9 +9,8 @@ const Skills: React.FC = () => {
       title: "Programming Languages",
       icon: <Code className="w-6 h-6" />,
       skills: [
-        { name: "Python", level: 90, color: "from-green-400 to-green-600" },
+        { name: "Python", level: 75, color: "from-green-400 to-green-600" },
         { name: "Java", level: 80, color: "from-orange-400 to-orange-600" },
-        { name: "JavaScript", level: 75, color: "from-yellow-400 to-yellow-600" },
         { name: "SQL", level: 85, color: "from-blue-400 to-blue-600" }
       ]
     },
@@ -19,9 +18,9 @@ const Skills: React.FC = () => {
       title: "AI/ML Technologies",
       icon: <Brain className="w-6 h-6" />,
       skills: [
-        { name: "TensorFlow", level: 85, color: "from-orange-400 to-red-500" },
-        { name: "OpenCV", level: 90, color: "from-blue-400 to-purple-500" },
-        { name: "MediaPipe", level: 88, color: "from-purple-400 to-pink-500" },
+        { name: "TensorFlow", level: 65, color: "from-orange-400 to-red-500" },
+        { name: "OpenCV", level: 70, color: "from-blue-400 to-purple-500" },
+        { name: "MediaPipe", level: 80, color: "from-purple-400 to-pink-500" },
         { name: "Scikit-learn", level: 80, color: "from-green-400 to-blue-500" }
       ]
     },
@@ -31,28 +30,11 @@ const Skills: React.FC = () => {
       skills: [
         { name: "Pandas", level: 85, color: "from-indigo-400 to-purple-500" },
         { name: "NumPy", level: 80, color: "from-blue-400 to-indigo-500" },
-        { name: "Matplotlib", level: 75, color: "from-green-400 to-teal-500" },
-        { name: "Plotly", level: 70, color: "from-pink-400 to-red-500" }
+        { name: "Matplotlib", level: 75, color: "from-green-400 to-teal-500" }
       ]
     },
-    {
-      title: "Databases",
-      icon: <Database className="w-6 h-6" />,
-      skills: [
-        { name: "MySQL", level: 85, color: "from-blue-400 to-cyan-500" },
-        { name: "MongoDB", level: 70, color: "from-green-400 to-emerald-500" },
-        { name: "PostgreSQL", level: 75, color: "from-indigo-400 to-blue-500" }
-      ]
-    },
-    {
-      title: "Web Technologies",
-      icon: <Globe className="w-6 h-6" />,
-      skills: [
-        { name: "React", level: 80, color: "from-cyan-400 to-blue-500" },
-        { name: "Node.js", level: 75, color: "from-green-400 to-emerald-500" },
-        { name: "HTML/CSS", level: 85, color: "from-orange-400 to-red-500" }
-      ]
-    },
+    
+    
     {
       title: "Tools & Platforms",
       icon: <Cpu className="w-6 h-6" />,
@@ -178,7 +160,6 @@ const Skills: React.FC = () => {
                 'Data Science',
                 'Deep Learning',
                 'Neural Networks',
-                'Algorithm Design',
                 'Problem Solving',
                 'Team Collaboration'
               ].map((competency, index) => (

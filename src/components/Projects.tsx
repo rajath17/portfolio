@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, Eye, Code2, Filter } from 'lucide-react';
+import { Github, Code2, Filter } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -12,42 +12,60 @@ const Projects: React.FC = () => {
       image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600",
       technologies: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
       category: "computer-vision",
-      github: "#",
+      github: "https://github.com/rajath17/gesture-based-brightness-control/tree/main#",
       demo: "#",
       highlights: ["Real-time gesture recognition", "Smooth brightness transitions", "User-friendly interface"]
     },
+   
     {
-      id: 2,
-      title: "Virtual Mouse Control",
-      description: "Advanced hand-tracking system that replaces traditional mouse input, enabling cursor control through finger movements and gesture-based clicking.",
-      image: "https://images.pexels.com/photos/7688335/pexels-photo-7688335.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: ["Python", "MediaPipe", "OpenCV", "PyAutoGUI"],
+      id: 5,
+      title: "Virtual Mouse using Hand Tracking",
+      description: "Control the mouse with hand gestures using OpenCV, MediaPipe and PyAutoGUI. Real-time, smooth, and hardware-free.",
+      image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600",
+      technologies: ["Python", "OpenCV", "MediaPipe", "PyAutoGUI"],
       category: "computer-vision",
-      github: "#",
+      github: "https://github.com/rajath17/gesture-mouse",
       demo: "#",
-      highlights: ["Precise cursor control", "Multi-gesture support", "Cross-platform compatibility"]
+      highlights: [
+        "Cursor control with hand movement",
+        "Gesture-based left/right click",
+        "Scroll using finger gestures",
+        "Real-time performance via webcam"
+      ]
     },
-    {
-      id: 3,
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for data visualization and analysis, featuring real-time charts and comprehensive reporting capabilities.",
-      image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: ["Python", "Pandas", "Plotly", "Dash"],
-      category: "data-analytics",
-      github: "#",
-      demo: "#",
-      highlights: ["Interactive visualizations", "Real-time data processing", "Customizable reports"]
-    },
+   
     {
       id: 4,
-      title: "Machine Learning Pipeline",
-      description: "End-to-end ML pipeline for automated model training, evaluation, and deployment with comprehensive monitoring capabilities.",
+      title: "Hand-and-Face-detection-and-tracking",
+      description: "Real-time hand and face detection and tracking using computer vision and machine learning.",
       image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: ["Python", "Scikit-learn", "TensorFlow", "MLflow"],
+      technologies: ["Python", "OpenCV", " MediaPipe", "CNN"],
       category: "machine-learning",
-      github: "#",
+      github: "https://github.com/rajath17/Hands-and-Face-detection#",
       demo: "#",
-      highlights: ["Automated workflows", "Model versioning", "Performance monitoring"]
+      highlights:["Real-time detection and tracking", 
+        "Computer vision with OpenCV/MediaPipe", 
+        "Deep learning integration (CNN/YOLO)", 
+        "Gesture and face movement analysis", 
+        "Applications in HCI and security"]
+    },
+    {
+      id: 6,
+      title: "Autonomous Multi-Agent V2V Simulation",
+      description: "High-fidelity autonomous driving environment where multiple agents coordinate using secure V2V communication for safe and efficient navigation.",
+      image: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=600",
+      technologies: ["Python", "Simulation", "Path Planning", "YAML"],
+      category: "machine-learning",
+      github: "https://github.com/rajath17/autonomous-multi-agent-v2v-simulation",
+      demo: "#",
+      highlights: [
+        "Multi-agent autonomous driving simulation",
+        "Secure V2V communication (encryption enabled)",
+        "Hybrid A* based path planning",
+        "Intelligent Driver Model (IDM) integration",
+        "Config-driven simulation (YAML)",
+        "Detailed logging and analysis support"
+      ]
     }
   ];
 
@@ -119,18 +137,12 @@ const Projects: React.FC = () => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex space-x-4">
+                  <div className="flex">
                     <a 
                       href={project.github}
                       className="bg-gray-800/90 text-white p-3 rounded-full hover:bg-blue-500 transition-colors duration-200"
                     >
                       <Github size={20} />
-                    </a>
-                    <a 
-                      href={project.demo}
-                      className="bg-gray-800/90 text-white p-3 rounded-full hover:bg-purple-500 transition-colors duration-200"
-                    >
-                      <ExternalLink size={20} />
                     </a>
                   </div>
                 </div>
@@ -165,20 +177,13 @@ const Projects: React.FC = () => {
                   ))}
                 </ul>
 
-                <div className="flex space-x-4">
+                <div className="flex">
                   <a 
                     href={project.github}
                     className="flex-1 flex items-center justify-center space-x-2 bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors duration-200"
                   >
                     <Code2 size={16} />
                     <span>View Code</span>
-                  </a>
-                  <a 
-                    href={project.demo}
-                    className="flex-1 flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:scale-105 transition-transform duration-200"
-                  >
-                    <Eye size={16} />
-                    <span>Live Demo</span>
                   </a>
                 </div>
               </div>
@@ -188,7 +193,7 @@ const Projects: React.FC = () => {
 
         <div className="text-center mt-12">
           <a 
-            href="#"
+            href="https://github.com/rajath17"
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full hover:scale-105 transition-transform duration-200"
           >
             <Github size={20} />

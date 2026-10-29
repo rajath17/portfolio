@@ -11,8 +11,8 @@ const About: React.FC = () => {
 
   useEffect(() => {
     const targets = {
-      projects: 2,
-      technologies: 5,
+      projects: 5,
+      technologies: 10,
       experience: 2,
       achievements: 5
     };
